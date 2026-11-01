@@ -1,0 +1,38 @@
+plugins {
+	id 'com.android.application'
+	id 'com.google.gms.google-services'
+}
+
+android {
+	compileSdk 34
+	
+	useLibrary 'org.apache.http.legacy'
+	
+	defaultConfig {
+		applicationId "com.ahmed.app"
+		namespace "com.ahmed.app"
+		minSdkVersion 23
+		targetSdkVersion 35
+		versionCode 1
+		versionName "1.0"
+	}
+	
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+		}
+	}
+	buildFeatures {
+		viewBinding true
+	}
+}
+
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+	implementation 'androidx.appcompat:appcompat:1.7.1'
+	implementation 'com.google.android.material:material:1.12.0'
+	implementation platform('com.google.firebase:firebase-bom:34.1.0')
+	implementation 'com.google.firebase:firebase-database'
+	implementation 'com.google.code.gson:gson:2.11.0'
+}

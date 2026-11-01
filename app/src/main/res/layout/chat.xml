@@ -1,0 +1,118 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/root"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:textSize="12sp"
+			android:layout_weight="1" />
+		<TextView
+			android:id="@+id/avatar_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="12sp" />
+	</LinearLayout>
+	<ListView
+		android:id="@+id/list_messages"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:choiceMode="none"
+		android:layout_weight="1" />
+	<LinearLayout
+		android:id="@+id/reply_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:orientation="horizontal"
+		android:visibility="gone">
+		<TextView
+			android:id="@+id/btn_cancel_reply"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="12sp" />
+		<LinearLayout
+			android:id="@+id/reply_info"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_weight="1">
+			<TextView
+				android:id="@+id/reply_name"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="12sp" />
+			<TextView
+				android:id="@+id/reply_text"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="12sp" />
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/input_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+		<LinearLayout
+			android:id="@+id/recording_panel"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center_vertical"
+			android:orientation="horizontal"
+			android:visibility="gone"
+			android:background="@drawable/recording_panel_bg"
+			android:paddingLeft="14dp"
+			android:paddingRight="14dp">
+			<TextView
+				android:id="@+id/recording_timer"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="00:00"
+				android:textColor="#111111"
+				android:textSize="15sp"
+				android:textStyle="bold" />
+			<com.ahmed.app.ChatActivity.WaveformView
+				android:id="@+id/recording_waveform"
+				android:layout_width="0dp"
+				android:layout_height="48dp"
+				android:layout_weight="1"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp" />
+			<TextView
+				android:id="@+id/btn_stop_recording"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="إيقاف"
+				android:textColor="#E85C5C"
+				android:textSize="14sp"
+				android:textStyle="bold"
+				android:padding="10dp" />
+		</LinearLayout>
+		<ImageView
+			android:id="@+id/btn_send"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/icon_send_round"
+			android:scaleType="center" />
+		<EditText
+			android:id="@+id/edit_message"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:textSize="12sp"
+			android:layout_weight="1" />
+	</LinearLayout>
+</LinearLayout>
