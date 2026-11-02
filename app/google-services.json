@@ -24,25 +24,6 @@
           ]
         }
       }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:590411182335:android:269469cea75dbe54755cca",
-        "android_client_info": { "package_name": "com.ahmed.uran" }
-      },
-      "oauth_client": [
-        { "client_id": "590411182335-oilpdl5q3ppvla77ektve4bvmehcl0bh.apps.googleusercontent.com", "client_type": 3 }
-      ],
-      "api_key": [
-        { "current_key": "AIzaSyDWvFBfGzhfCGAMalgzcRCRj_48L8m_CVk" }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            { "client_id": "590411182335-oilpdl5q3ppvla77ektve4bvmehcl0bh.apps.googleusercontent.com", "client_type": 3 }
-          ]
-        }
-      }
     }
   ],
   "configuration_version": "1"
